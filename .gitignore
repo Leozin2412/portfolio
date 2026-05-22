@@ -1,0 +1,18 @@
+# Dependencies
+portfolio/node_modules/
+
+# Production
+portfolio/dist/
+portfolio/dist-ssr/
+
+# Logs
+*.log
+portfolio/npm-debug.log*
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/

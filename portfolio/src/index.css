@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --color-mac-bg: #1a1a1a;
+  --color-mac-header: #262626;
+  --color-accent: #00ff41; /* "Matrix" Green */
+  --color-accent-dark: #008f11; /* Darker Green */
+  --color-editor-bg: #000000; /* Pure Black background */
+}
+
+@layer base {
+  body, * {
+    /* macOS Style Arrow Cursor (White fill, black outline) */
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4.5 3.5V19.5L9.5 14.5L13.5 22.5L16.5 21L12.5 13L18.5 13L4.5 3.5Z" fill="white" stroke="black" stroke-width="1.5" stroke-linejoin="round"/></svg>'), auto;
+  }
+  
+  /* macOS Style Pointer/Hand Cursor */
+  a, button, [role="button"], input, .cursor-pointer {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9.5 3V11M9.5 3C9.5 2.17157 8.82843 1.5 8 1.5C7.17157 1.5 6.5 2.17157 6.5 3V11M9.5 3C10.3284 3 11 3.67157 11 4.5V11M12.5 6V11M12.5 6C12.5 5.17157 13.1716 4.5 14 4.5C14.8284 4.5 15.5 5.17157 15.5 6V13.5C15.5 16.5376 13.0376 19 10 19H9C6.23858 19 4 16.7614 4 14V10.5C4 9.67157 4.67157 9 5.5 9C6.32843 9 7 9.67157 7 10.5V11" stroke="black" stroke-width="1.5" fill="white" stroke-linecap="round" stroke-linejoin="round"/></svg>'), pointer;
+  }
+
+  body {
+    @apply bg-zinc-900 text-zinc-300;
+    margin: 0;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace; /* Code editor vibe */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Custom scrollbar to keep the editor vibe */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+::-webkit-scrollbar-thumb {
+  background: #1a1a1a;
+  border-radius: 4px;
+  border: 1px solid #00ff41;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00ff41;
+}
